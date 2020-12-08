@@ -1,0 +1,22 @@
+[
+  {
+    "path": "app",
+    "name": "小程序端",
+    "children": [
+      {
+        "path": "user",
+        "name": "用户模块"
+      }
+    ]
+  },
+  {
+    "path": "service",
+    "name": "服务接口",
+    "children": [
+      {
+        "path": "order",
+        "name": "订单模块"
+      }
+    ]
+  }
+]
