@@ -690,45 +690,32 @@ class Constant
      */
     const FAILURE = 3;
 
-
-    //mainPic
-    const MAINPIC = [
-        "fllk15323021"  => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/fb_fllk15323021.jpeg"],
-        "bcw15314223"   => ["rule" => "299-215", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_bcw15314223.jpg"],
-        "ryytn15314036" => ["rule" => "110.1-110", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_ryytn15314036.jpg"],
-        "njr15314060"   => ["rule" => "99-60", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_njr15314060.jpg"],
-        "lyl15313944"   => ["rule" => "199-110", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_lyl15313944.jpg"],
-        "wbq15313943"   => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_wbq15313943.jpg"],
-        "bql15313942"   => ["rule" => "169-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_bql15313942.jpg"],
-        "wd15313798"    => ["rule" => "199-115", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15276669_1124.jpeg"],
-        "yyz15262217"   => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/yyz15262217.jpeg"],
-        "bcw15227632"   => ["rule" => "299-215", "img_url" => "https://cdn.haowuji123.com/upload/ad/bcw15262041.png"],
-        "bql15226987"   => ["rule" => "169-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/bql15226430.png"],
-        "wd15251861"    => ["rule" => "199-120", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15243121.jpeg"],
-        "hdy15305904"   => ["rule" => "99-55", "img_url" => "https://cdn.haowuji123.com/upload/ad/sqb_hdy15305904.jpeg"],
-        "wd15276669"    => ["rule" => "199-115", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15276669_1124.jpeg"],
-        "wd15299255"    => ["rule" => "199-120", "img_url" => "https://cdn.haowuji123.com/upload/ad/sql_wd15299255.jpeg"],
-        "bcw15261950"   => ["rule" => "299-215", "img_url" => "https://cdn.haowuji123.com/upload/ad/bcw15262041.png"],
-        "wd15243121"    => ["rule" => "199-120", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15243121.jpeg"],
-        "hdy15300050"   => ["rule" => "99-55", "img_url" => "https://cdn.haowuji123.com/upload/ad/fb_hd20201204.png"],
-        "bcw15262041"   => ["rule" => "299-215", "img_url" => "https://cdn.haowuji123.com/upload/ad/bcw15262041.png"],
-        "njr15278057"   => ["rule" => "99-60", "img_url" => "https://cdn.haowuji123.com/upload/ad/njr15226635.png"],
-        "ryytn15257492" => ["rule" => "110.01-110", "img_url" => "https://cdn.haowuji123.com/upload/ad/ryytn15257492.png"],
-        "wbq15226477"   => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/wbq15226477.png"],
-        "bql15226135"   => ["rule" => "169-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/bql15226430.png"],
-        "hs15226356"    => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/hs15226356.png"],
-        "wd15278007"    => ["rule" => "199-115", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15251635.png"],
-        "bw15274615"    => ["rule" => "99-60", "img_url" => "https://cdn.haowuji123.com/upload/ad/bw15274615_1113_2.png"],
-        "qq15274600"    => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/qq15274600.png"],
-        "bcw15227179"   => ["rule" => "299-215", "img_url" => "https://cdn.haowuji123.com/upload/ad/bcw15227179.png"],
-        "njr15226635"   => ["rule" => "99-60", "img_url" => "https://cdn.haowuji123.com/upload/ad/njr15226635.png"],
-        "bql15226430"   => ["rule" => "169-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/bql15226430.png"],
-        "wd15251726"    => ["rule" => "199-115", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15251635.png"],
-        "lyl15262130"   => ["rule" => "199-105", "img_url" => "https://cdn.haowuji123.com/upload/ad/lyl15262130_1110.png"],
-        "lyf15226281"   => ["rule" => "399-305", "img_url" => "https://cdn.haowuji123.com/upload/ad/lyf15226281.png"],
-        "wd15251635"    => ["rule" => "199-115", "img_url" => "https://cdn.haowuji123.com/upload/ad/wd15251635.jpeg"],
-        "hs15289598"    => ["rule" => "199-130", "img_url" => "https://cdn.haowuji123.com/upload/ad/hs15289598.png"],
-        "ttpro15289598" => ["rule" => "2.01-2", "img_url" => "https://cdn.haowuji123.com/upload/ad/ttpro15289598.png"]
+    const NEW_MAIN_PIC = [
+        "sqb_bcw299-215"     => "https://cdn.haowuji123.com/upload/ad/sqb_bcw15314223.jpg",
+        "sqb_bw199-100"      => "https://cdn.haowuji123.com/upload/ad/sqb_bw15322991.jpeg",
+        "sqb_ryytn110.1-110" => "https://cdn.haowuji123.com/upload/ad/sqb_ryytn15314036.jpg",
+        "sqb_njr99-60"       => "https://cdn.haowuji123.com/upload/ad/sqb_njr15314060.jpg",
+        "sqb_lyl199-110"     => "https://cdn.haowuji123.com/upload/ad/sqb_lyl15313944.jpg",
+        "sqb_wbq199-130"     => "https://cdn.haowuji123.com/upload/ad/sqb_wbq15313943.jpg",
+        "sqb_bql169-130"     => "https://cdn.haowuji123.com/upload/ad/sqb_bql15313942.jpg",
+        "sqb_wd199-120"      => "https://cdn.haowuji123.com/upload/ad/sql_wd15299255.jpeg",
+        "sqb_wd199-115"      => "https://cdn.haowuji123.com/upload/ad/wd15276669_1124.jpeg",
+        "fb_hdy"             => "https://cdn.haowuji123.com/upload/ad/fb_hd20201204.png",
+        "fb_ssh169-130"      => "https://cdn.haowuji123.com/upload/ad/fb_ssh15322927.jpeg",
+        "fb_fllk199-130"     => "https://cdn.haowuji123.com/upload/ad/fb_fllk15323021.jpeg",
+        "fb_yyz199-130"      => "https://cdn.haowuji123.com/upload/ad/yyz15262217.jpeg",
+        "fb_bcw299-215"      => "https://cdn.haowuji123.com/upload/ad/bcw15262041.png",
+        "fb_bql169-130"      => "https://cdn.haowuji123.com/upload/ad/bql15226430.jpg",
+        "fb_wd199-120"       => "https://cdn.haowuji123.com/upload/ad/wd15243121.jpeg",
+        "fb_njr99-60"        => "https://cdn.haowuji123.com/upload/ad/njr15226635.png",
+        "fb_ryytn110.01-110" => "https://cdn.haowuji123.com/upload/ad/ryytn15257492.png",
+        "fb_wbq199-130"      => "https://cdn.haowuji123.com/upload/ad/wbq15226477.png",
+        "fb_hs199-130"       => "https://cdn.haowuji123.com/upload/ad/hs15226356.png",
+        "fb_wd199-115"       => "https://cdn.haowuji123.com/upload/ad/wd15251635.png",
+        "fb_bw99-60"         => "https://cdn.haowuji123.com/upload/ad/bw15274615_1113_2.png",
+        "fb_qq199-130"       => "https://cdn.haowuji123.com/upload/ad/qq15274600.png",
+        "fb_lyl199-105"      => "https://cdn.haowuji123.com/upload/ad/lyl15262130_1110.png",
+        "fb_lyf399-305"      => "https://cdn.haowuji123.com/upload/ad/lyf15226281.png",
     ];
 
     const MAIN_PIC_DEFAULT = "https://cdn.haowuji123.com/upload/ad/xxxx.png";
@@ -749,7 +736,9 @@ class Constant
         "霸王"    => "bw",
         "活动页"   => "hdy",
         "天图pro" => "ttpro",
-        "一叶子"   => "yyz"
+        "一叶子"   => "yyz",
+        "三生花"   => "ssh",
+        "香飘飘"   => "xpp"
     ];
 
 

@@ -78,7 +78,7 @@ class ImportCoupon extends Command
                 $pinpai = Constant::PING_PAI[$item[0]];
                 $logo = Constant::PING_LOGO[$item[0]];
 
-                $sn = $pinpai . $item[1];
+                $sn = $fileNameArr[0]."_".$pinpai . $item[1];
                 //是否是兜底
                 if ($item[8] == "是") {
                     $type = 2;
@@ -95,13 +95,14 @@ class ImportCoupon extends Command
                 } else {
                     $coupon_type = 1;
                 }
+                $img_index = $fileNameArr[0]."_".$pinpai.trim($item[2]);
 
                 $main_mat = array(
                     "loc_id"     => $this->locIds[$fileNameArr[0]],
                     "sn"         => $sn,
                     "status"     => 1,
                     "mat_type"   => "single",
-                    "main_pic"   => !empty(Constant::MAINPIC[$sn]) ? Constant::MAINPIC[$sn]["img_url"] : Constant::MAIN_PIC_DEFAULT,
+                    "main_pic"   => !empty(Constant::NEW_MAIN_PIC[$img_index]) ? Constant::NEW_MAIN_PIC[$img_index] : Constant::MAIN_PIC_DEFAULT,
                     "type"       => $type,
                     "appid"      => $this->appid,
                     "page"       => $item[4],

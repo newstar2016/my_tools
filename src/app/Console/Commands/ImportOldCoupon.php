@@ -35,7 +35,7 @@ class ImportOldCoupon extends Command
         "sqb" => 2,
     ];
 
-    protected $file = "fb.xlsx";
+    protected $file = "sqb.xlsx";
 
     protected $appid = "wxde69093658ce8aa8";
     protected $mchid = 1530183331;
@@ -74,7 +74,7 @@ class ImportOldCoupon extends Command
                     exit;
                 }
                 $pinpai = Constant::PING_PAI[$item[0]];
-                $sn = $pinpai . $item[1];
+                $sn = $fileNameArr[0]."_".$pinpai . $item[1];
                 //是否是兜底
                 if ($item[8] == "是") {
                     $type = 2;
@@ -91,18 +91,19 @@ class ImportOldCoupon extends Command
                 if ($item[0] == "活动页") {
                     $send_way = 3;
                 }
+                $img_index = $fileNameArr[0]."_".$pinpai.trim($item[2]);
 
                 $main_mat = array(
                     "sn"          => $sn,
                     "type"        => $type,
-                    "img_url"     => !empty(Constant::MAINPIC[$sn]) ? Constant::MAINPIC[$sn]["img_url"] : Constant::MAIN_PIC_DEFAULT,
+                    "img_url"     => !empty(Constant::NEW_MAIN_PIC[$img_index]) ? Constant::NEW_MAIN_PIC[$img_index] : Constant::MAIN_PIC_DEFAULT,
                     "stock_id"    => trim($item[1]),
                     "mchid"       => $this->mchid,
                     "use_et"      => intval(trim($item[5])),
                     "avilable_bt" => $avilable_bt,
                     "avilable_et" => $avilable_et,
                     "appid"       => $this->appid,
-                    "page"        => $item[4],
+                    "page"        => trim($item[4]),
                     "filter"      => "{}",
                     "limit_send"  => $liangji,
                     "send_way"    => $send_way,
