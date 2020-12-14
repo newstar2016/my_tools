@@ -691,6 +691,7 @@ class Constant
     const FAILURE = 3;
 
     const NEW_MAIN_PIC = [
+        "sqb_xpp199-115"     => "https://cdn.haowuji123.com/upload/ad/sqb_xpp15323330.jpeg",
         "sqb_bcw299-215"     => "https://cdn.haowuji123.com/upload/ad/sqb_bcw15314223.jpg",
         "sqb_bw199-100"      => "https://cdn.haowuji123.com/upload/ad/sqb_bw15322991.jpeg",
         "sqb_ryytn110.1-110" => "https://cdn.haowuji123.com/upload/ad/sqb_ryytn15314036.jpg",
@@ -700,7 +701,7 @@ class Constant
         "sqb_bql169-130"     => "https://cdn.haowuji123.com/upload/ad/sqb_bql15313942.jpg",
         "sqb_wd199-120"      => "https://cdn.haowuji123.com/upload/ad/sql_wd15299255.jpeg",
         "sqb_wd199-115"      => "https://cdn.haowuji123.com/upload/ad/wd15276669_1124.jpeg",
-        "fb_hdy"             => "https://cdn.haowuji123.com/upload/ad/fb_hd20201204.png",
+        "fb_hdy"             => "https://cdn.haowuji123.com/upload/ad/fb_hdy2020121001.jpeg",
         "fb_ssh169-130"      => "https://cdn.haowuji123.com/upload/ad/fb_ssh15322927.jpeg",
         "fb_fllk199-130"     => "https://cdn.haowuji123.com/upload/ad/fb_fllk15323021.jpeg",
         "fb_yyz199-130"      => "https://cdn.haowuji123.com/upload/ad/yyz15262217.jpeg",
@@ -757,7 +758,8 @@ class Constant
         "百草味"   => "https://cdn.haowuji123.com/upload/ad/bcw_logo.jpeg",
         "霸王"    => "https://cdn.haowuji123.com/upload/ad/bw_logo.jpeg",
         "活动页"   => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg",
-        "天图pro" => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg"
+        "天图pro" => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg",
+        "一叶子" => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg"
     ];
 
 }

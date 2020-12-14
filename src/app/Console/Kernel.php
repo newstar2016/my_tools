@@ -6,6 +6,7 @@ use App\Console\Commands\Document;
 use App\Console\Commands\ImportCoupon;
 use App\Console\Commands\ImportOldCoupon;
 use App\Console\Commands\MigrateData;
+use App\Console\Commands\Statistics;
 use App\Console\Commands\TestAes;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -28,6 +29,7 @@ class Kernel extends ConsoleKernel
         'import_old_coupon' => ImportOldCoupon::class,
         'test_aes'          => TestAes::class,
         'migrate_data'      => MigrateData::class,
+        'statistics'        => Statistics::class,
     ];
 
     /**

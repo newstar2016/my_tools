@@ -27,7 +27,7 @@ class ImportCoupon extends Command
      */
     protected $description = '导入优惠券广告数据';
 
-    protected $maxColumnNum = 11; //最大列数
+    protected $maxColumnNum = 12; //最大列数
 
     //广告位id
     protected $locIds = [
@@ -38,7 +38,7 @@ class ImportCoupon extends Command
         "ls"      => 3,
         "ls-test" => 3,
     ];
-    protected $file = "ls.xlsx";
+    protected $file = "fb-new.xlsx";
     protected $appid = "wxde69093658ce8aa8";
     protected $mchid = 1530183331;  //代金券商户号
     protected $business_mchid = 1561018721; //商家券商户号
@@ -76,9 +76,17 @@ class ImportCoupon extends Command
                     exit;
                 }
                 $pinpai = Constant::PING_PAI[$item[0]];
-                $logo = Constant::PING_LOGO[$item[0]];
-
-                $sn = $fileNameArr[0]."_".$pinpai . $item[1];
+                $logo = !empty(Constant::PING_LOGO[$item[0]]) ? Constant::PING_LOGO[$item[0]] : "https://cdn.haowuji123.com/upload/ad/xxx.jpeg";
+                if($fileNameArr[0]=="fb-new"){
+                    $fileNameArr[0]="fb";
+                }
+                if($fileNameArr[0]=="sqb-new"){
+                    $fileNameArr[0]="sqb";
+                }
+                if($fileNameArr[0]=="ls-new"){
+                    $fileNameArr[0]="ls";
+                }
+                $sn = $fileNameArr[0] . "_" . $pinpai . $item[1];
                 //是否是兜底
                 if ($item[8] == "是") {
                     $type = 2;
@@ -86,6 +94,10 @@ class ImportCoupon extends Command
                 } else {
                     $type = 1;
                     $liangji = rtrim($item[9], "M") . "000";
+                }
+                //是否是h5
+                if ($item[11] == "是") {
+                    $type = 4;
                 }
 
                 //是否是商家券
@@ -95,7 +107,7 @@ class ImportCoupon extends Command
                 } else {
                     $coupon_type = 1;
                 }
-                $img_index = $fileNameArr[0]."_".$pinpai.trim($item[2]);
+                $img_index = $fileNameArr[0] . "_" . $pinpai . trim($item[2]);
 
                 $main_mat = array(
                     "loc_id"     => $this->locIds[$fileNameArr[0]],
@@ -144,6 +156,7 @@ class ImportCoupon extends Command
                 );
                 StockMat::query()->create($stock_mat);
                 DB::commit();
+                echo "已处理到第" . $key . "个,批次号：" . $item[1] . ",广告素材id：" . $main_obj->id . PHP_EOL;
             } catch (\Exception $e) {
                 Log::info($e);
                 DB::rollBack();
