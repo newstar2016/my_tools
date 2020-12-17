@@ -691,6 +691,7 @@ class Constant
     const FAILURE = 3;
 
     const NEW_MAIN_PIC = [
+        "sqb_fllk199-130"     => "https://cdn.haowuji123.com/upload/ad/sqb_fllk199-130.jpeg",
         "sqb_xpp199-115"     => "https://cdn.haowuji123.com/upload/ad/sqb_xpp15323330.jpeg",
         "sqb_bcw299-215"     => "https://cdn.haowuji123.com/upload/ad/sqb_bcw15314223.jpg",
         "sqb_bw199-100"      => "https://cdn.haowuji123.com/upload/ad/sqb_bw15322991.jpeg",
@@ -701,7 +702,7 @@ class Constant
         "sqb_bql169-130"     => "https://cdn.haowuji123.com/upload/ad/sqb_bql15313942.jpg",
         "sqb_wd199-120"      => "https://cdn.haowuji123.com/upload/ad/sql_wd15299255.jpeg",
         "sqb_wd199-115"      => "https://cdn.haowuji123.com/upload/ad/wd15276669_1124.jpeg",
-        "fb_hdy"             => "https://cdn.haowuji123.com/upload/ad/fb_hdy2020121001.jpeg",
+        "fb_hdy"             => "https://cdn.haowuji123.com/upload/ad/fb_hdy20201215.jpeg",
         "fb_ssh169-130"      => "https://cdn.haowuji123.com/upload/ad/fb_ssh15322927.jpeg",
         "fb_fllk199-130"     => "https://cdn.haowuji123.com/upload/ad/fb_fllk15323021.jpeg",
         "fb_yyz199-130"      => "https://cdn.haowuji123.com/upload/ad/yyz15262217.jpeg",
