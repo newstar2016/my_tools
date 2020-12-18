@@ -112,8 +112,8 @@ class ImportOldCoupon extends Command
                 );
 
                 $mat_obj = Material::query()->create($main_mat);
-                if($this->locIds[$fileNameArr[0]]==1){
-                    $mat_obj->update(['stock_id'=>(trim($item[1])+$mat_obj->id)]);
+                if($item[0] == "活动页"){
+                    $mat_obj->update(['stock_id'=>(trim($item[1]).$mat_obj->id)]);
                 }
 
                 $mat_loc = array(

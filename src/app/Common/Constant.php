@@ -691,7 +691,7 @@ class Constant
     const FAILURE = 3;
 
     const NEW_MAIN_PIC = [
-        "sqb_fllk199-130"     => "https://cdn.haowuji123.com/upload/ad/sqb_fllk199-130.jpeg",
+        "sqb_fllk199-130"    => "https://cdn.haowuji123.com/upload/ad/sqb_fllk199-130.jpeg",
         "sqb_xpp199-115"     => "https://cdn.haowuji123.com/upload/ad/sqb_xpp15323330.jpeg",
         "sqb_bcw299-215"     => "https://cdn.haowuji123.com/upload/ad/sqb_bcw15314223.jpg",
         "sqb_bw199-100"      => "https://cdn.haowuji123.com/upload/ad/sqb_bw15322991.jpeg",
@@ -718,6 +718,12 @@ class Constant
         "fb_qq199-130"       => "https://cdn.haowuji123.com/upload/ad/qq15274600.png",
         "fb_lyl199-105"      => "https://cdn.haowuji123.com/upload/ad/lyl15262130_1110.png",
         "fb_lyf399-305"      => "https://cdn.haowuji123.com/upload/ad/lyf15226281.png",
+    ];
+
+    //商家券的券图
+    const S_MAIN_PIC = [
+        "fb_lyl199-110"    => "https://cdn.haowuji123.com/upload/ad/fb_lyl199-110.jpeg",
+        "fb_bcw299-215"    => "https://cdn.haowuji123.com/upload/ad/fb_bcw299-215.jpeg",
     ];
 
     const MAIN_PIC_DEFAULT = "https://cdn.haowuji123.com/upload/ad/xxxx.png";
@@ -760,7 +766,7 @@ class Constant
         "霸王"    => "https://cdn.haowuji123.com/upload/ad/bw_logo.jpeg",
         "活动页"   => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg",
         "天图pro" => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg",
-        "一叶子" => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg"
+        "一叶子"   => "https://cdn.haowuji123.com/upload/ad/xxx.jpeg"
     ];
 
 }

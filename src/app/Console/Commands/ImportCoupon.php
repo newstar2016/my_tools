@@ -77,14 +77,14 @@ class ImportCoupon extends Command
                 }
                 $pinpai = Constant::PING_PAI[$item[0]];
                 $logo = !empty(Constant::PING_LOGO[$item[0]]) ? Constant::PING_LOGO[$item[0]] : "https://cdn.haowuji123.com/upload/ad/xxx.jpeg";
-                if($fileNameArr[0]=="fb-new"){
-                    $fileNameArr[0]="fb";
+                if ($fileNameArr[0] == "fb-new") {
+                    $fileNameArr[0] = "fb";
                 }
-                if($fileNameArr[0]=="sqb-new"){
-                    $fileNameArr[0]="sqb";
+                if ($fileNameArr[0] == "sqb-new") {
+                    $fileNameArr[0] = "sqb";
                 }
-                if($fileNameArr[0]=="ls-new"){
-                    $fileNameArr[0]="ls";
+                if ($fileNameArr[0] == "ls-new") {
+                    $fileNameArr[0] = "ls";
                 }
                 $sn = $fileNameArr[0] . "_" . $pinpai . $item[1];
                 //是否是兜底
@@ -108,13 +108,17 @@ class ImportCoupon extends Command
                     $coupon_type = 1;
                 }
                 $img_index = $fileNameArr[0] . "_" . $pinpai . trim($item[2]);
-
+                if (!empty(Constant::S_MAIN_PIC[$img_index])) {
+                    $img_index = Constant::S_MAIN_PIC[$img_index];
+                } else {
+                    $img_index = !empty(Constant::NEW_MAIN_PIC[$img_index]) ? Constant::NEW_MAIN_PIC[$img_index] : Constant::MAIN_PIC_DEFAULT;
+                }
                 $main_mat = array(
                     "loc_id"     => $this->locIds[$fileNameArr[0]],
                     "sn"         => $sn,
                     "status"     => 1,
                     "mat_type"   => "single",
-                    "main_pic"   => !empty(Constant::NEW_MAIN_PIC[$img_index]) ? Constant::NEW_MAIN_PIC[$img_index] : Constant::MAIN_PIC_DEFAULT,
+                    "main_pic"   => $img_index,
                     "type"       => $type,
                     "appid"      => $this->appid,
                     "page"       => $item[4],
